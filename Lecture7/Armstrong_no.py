@@ -57,3 +57,5 @@ if (ans == num):
     print ("is a palidrome")
 else:
     print ("is not a palidrome")
+
+# more advance python practice notes coming up
