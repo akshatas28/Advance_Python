@@ -22,4 +22,59 @@ def reversearray(nums, value, i, temp):
     if value!=0:
         nums[i+1] = nums[i]
         return reversearray(nums, value, i-1, temp)
-    
+
+i=0
+count=0
+l1=[]
+while i<len(nums):
+    if nums[i]!=1:
+        count=0
+        i+=1
+    elif nums[i]==1:
+        count+=1
+        i+=1
+        l1.append(count)
+return (max(l1))
+
+maxcount=0
+count=0
+i=0
+while i<len(nums):
+    if nums[i]==1:
+        count+=1
+        i+=1
+    elif nums[i]!=1:
+        if count>maxcount:
+            maxcount=count
+        count=0
+        i+=1
+print(maxcount)
+
+
+st=str(x)
+
+if x<0:
+    p=(int(st[::-1].strip('-')))
+    if p<=((2**31)-1) and p>=(-(2**31)):
+        print(-p)
+else:
+    p=(int(st[::-1]))
+    if x<=((2**31)-1) and x>=(-(2**31)):
+        print(p)
+
+class Solution:
+    def reverse(self, x: int) -> int:
+        st=str(x)
+
+        if x<0:
+            p=(int(st[::-1].strip('-')))
+            if p<=((2**31)-1) and p>=(-(2**31)):
+                return (-p)
+            else:
+                return 0
+        else:
+            p=(int(st[::-1]))
+            if p<=((2**31)-1) and p>=(-(2**31)):
+                return (p)
+            else:
+                return 0
