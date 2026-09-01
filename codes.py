@@ -78,3 +78,18 @@ class Solution:
                 return (p)
             else:
                 return 0
+
+for i in range(0, 1):
+    buyprice=prices[i]
+    for j in range(i+1, len(prices)):
+        if buyprice>prices[j]:
+            buyprice=prices[j]
+            minindex=j
+sellprice=0
+for i in range(minindex+1, len(prices)):
+    if prices[j]>buyprice and prices[j]>sellprice:
+        sellprice=prices[j]
+if(sellprice) <=0:
+     print(0) 
+else:
+     print(sellprice-buyprice)
