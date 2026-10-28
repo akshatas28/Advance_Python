@@ -18,7 +18,7 @@ Learn the concept
       ↓
 Write the code
       ↓
-Understand the logic
+Understand the logic, pattern
       ↓
 Solve problems
       ↓
